@@ -1,4 +1,4 @@
-# Suhyun Choi — Academic Website
+# Soohyun Choi — Academic Website
 
 Static source for `https://schoish.github.io/`.
 
@@ -14,4 +14,4 @@ Then open `http://localhost:8000`.
 
 ## Updating the CV
 
-Replace `assets/Suhyun_Choi_CV.pdf` with the latest PDF while keeping the filename unchanged.
+Replace `assets/Soohyun_Choi_CV.pdf` with the latest PDF while keeping the filename unchanged.
