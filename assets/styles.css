@@ -39,6 +39,17 @@ nav { display: flex; gap: 26px; font-size: 13px; }
 nav a { color: var(--muted); }
 
 .intro { padding: 82px 0 76px; }
+.intro-grid { display: grid; grid-template-columns: minmax(0, 1fr) 180px; gap: 56px; align-items: start; }
+.profile-photo {
+  width: 180px;
+  aspect-ratio: 4 / 5;
+  display: grid;
+  place-items: center;
+  border: 1px dashed #aeb8c4;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: .04em;
+}
 .field { margin: 0 0 14px; color: var(--teal); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 h1 { margin: 0; color: var(--navy); font-size: clamp(42px, 7vw, 62px); line-height: 1.05; letter-spacing: -.035em; }
 .affiliation { margin: 19px 0 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
@@ -84,6 +95,8 @@ footer { min-height: 82px; display: flex; align-items: center; justify-content: 
   .site-header { min-height: 66px; }
   nav { gap: 15px; }
   .intro { padding: 58px 0 56px; }
+  .intro-grid { grid-template-columns: 1fr; gap: 34px; }
+  .profile-photo { width: 150px; order: -1; }
   .research-statement { font-size: 15px; }
   .section { padding: 52px 0; }
   .research-item { grid-template-columns: 1fr; gap: 12px; }
