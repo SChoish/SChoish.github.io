@@ -1,6 +1,6 @@
 :root {
   --navy: #193f73;
-  --teal: #0d8490;
+  --teal: #0b7c86;
   --red: #c43d4d;
   --ink: #202936;
   --muted: #657184;
@@ -51,7 +51,7 @@ h1 { margin: 0; color: var(--navy); font-size: clamp(42px, 7vw, 62px); line-heig
 .section > h2 { margin: 0 0 33px; color: var(--navy); font-size: 26px; line-height: 1.2; }
 .research-item { display: grid; grid-template-columns: 145px minmax(0, 1fr); gap: 30px; padding: 32px 0; border-top: 1px solid var(--line); }
 .research-item:last-child { border-bottom: 1px solid var(--line); }
-.research-meta { display: flex; flex-direction: column; gap: 5px; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .05em; }
+.research-meta { display: flex; flex-direction: column; gap: 5px; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; }
 .research-meta .status { color: var(--red); font-weight: 700; }
 .research-item h3 { margin: -3px 0 0; color: var(--navy); font-size: 21px; line-height: 1.35; }
 .research-item p { margin: 13px 0 0; color: #465264; font-size: 14px; line-height: 1.75; }
@@ -70,14 +70,14 @@ h1 { margin: 0; color: var(--navy); font-size: clamp(42px, 7vw, 62px); line-heig
 .timeline dd span { color: var(--muted); }
 .honors { margin: 0; padding: 0; list-style: none; }
 .honors li { padding: 0 0 17px; color: #465264; font-size: 13px; line-height: 1.5; }
-.honors span { display: block; color: var(--muted); font-size: 11px; }
+.honors span { display: block; color: var(--muted); font-size: 12px; }
 .background-side { display: flex; flex-direction: column; }
 .coursework { margin-top: 22px; padding-top: 25px; border-top: 1px solid var(--line); }
 .coursework h3 { margin-bottom: 16px; }
 .coursework p { margin: 0 0 15px; color: #465264; font-size: 12.5px; line-height: 1.65; }
 .coursework strong { color: var(--ink); }
 
-footer { min-height: 82px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+footer { min-height: 82px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
 
 @media (max-width: 680px) {
   .page { width: min(100% - 32px, 940px); }
