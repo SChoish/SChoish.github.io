@@ -113,7 +113,9 @@
                 step and composes a small number of refinements whose anchor moves to the latest
                 policy after each step. Re-centering changes the finite-step optimization path, so
                 MPI is not equivalent to taking more gradient steps on the same fixed-anchor loss
-                or simply weakening regularization. My current work studies
+                or simply weakening regularization. This direction builds on POGO, my earlier
+                exploration of transport-map policies and JKO/Sinkhorn-based policy flows. My
+                current work studies
                 <span class="math"> &tau;</span> as the implicit discretization step size of the
                 critic-induced policy flow: small values produce conservative local motion,
                 whereas larger values travel farther but increase discretization and critic-error
