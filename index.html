@@ -33,10 +33,13 @@
               </p>
               <p class="research-statement">
                 I study how iterative computation and path generation shape policy improvement
-                and long-horizon decision making. In multi-step proximal policy improvement,
-                I analyze how the proximal step size <span class="math">&tau;</span> changes the
-                behavior of iterative refinement, using empirical sweeps and mathematical
-                diagnostics to distinguish local, finite-step, and over-refinement regimes.
+                and long-horizon decision making. In offline RL, policy improvement must use a
+                learned critic without moving too far into regions where its estimates are
+                unreliable. My work on Multi-step Proximal Policy Improvement (MPI) refines a
+                policy through a short sequence of critic-guided proximal steps, each anchored at
+                the preceding policy. I analyze how the effective step size
+                <span class="math"> &tau;</span> balances conservative local movement against
+                farther but more critic-error-sensitive refinement.
                 In parallel, I am extending PathBridger toward PathFlower, exploring
                 goal-conditioned state flows for long-horizon offline control.
               </p>
@@ -104,13 +107,18 @@
             <div>
               <h3>Multi-step Proximal Policy Improvement</h3>
               <p>
-                I study recursively re-centered proximal refinement after a base offline RL
-                policy. My current focus is understanding the role of the step size
-                <span class="math"> &tau;</span>: how tau sweeps, local approximations, and
-                displacement diagnostics reveal qualitatively different refinement regimes.
-                In particular, I examine when a step behaves like a local flow, when it enters
-                a nonlocal finite-step regime, and when further refinement begins to over-optimize
-                critic artifacts.
+                Offline RL must balance staying near dataset-supported actions, where value
+                estimates are more reliable, with moving far enough to obtain meaningful policy
+                improvement. MPI interprets a behavior-regularized actor update as one proximal
+                step and composes a small number of refinements whose anchor moves to the latest
+                policy after each step. Re-centering changes the finite-step optimization path, so
+                MPI is not equivalent to taking more gradient steps on the same fixed-anchor loss
+                or simply weakening regularization. My current work studies
+                <span class="math"> &tau;</span> as the implicit discretization step size of the
+                critic-induced policy flow: small values produce conservative local motion,
+                whereas larger values travel farther but increase discretization and critic-error
+                risk. I use sweeps and displacement diagnostics to identify when repeated
+                refinement is useful and when it begins to over-refine.
               </p>
             </div>
           </article>
