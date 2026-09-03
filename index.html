@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Soohyun Choi studies multi-step policy improvement, offline goal-conditioned reinforcement learning, and long-horizon state-flow planning." />
+    <meta name="description" content="Soohyun Choi studies offline policy optimization, multi-step actor refinement, adaptive manifold optimization, and long-horizon goal-conditioned reinforcement learning." />
     <meta name="theme-color" content="#ffffff" />
     <title>Soohyun Choi | Reinforcement Learning</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -80,6 +80,32 @@
 
           <article class="research-item">
             <div class="research-meta">
+              <span class="status">Preprint</span>
+              <span>2026</span>
+            </div>
+            <div>
+              <h3>Multi-step Proximal Policy Improvement in Offline Reinforcement Learning</h3>
+              <p class="authors">
+                <strong>Soohyun Choi</strong><sup>*</sup>, Seonvin Cho<sup>*</sup>, and
+                Songnam Hong<sup>†</sup>
+              </p>
+              <p class="authors"><sup>*</sup>Equal contribution · <sup>†</sup>Corresponding author</p>
+              <p>
+                MPI interprets behavior-anchored offline actor updates as proximal policy
+                improvement steps on a policy manifold and composes sequential re-centered
+                refinements. It studies how geometry, step size, and critic error shape controlled
+                advancement beyond dataset support.
+              </p>
+              <p class="project-links">
+                <a href="https://github.com/SChoish/MPI" target="_blank" rel="noreferrer">Code</a>
+                <span>arXiv link forthcoming</span>
+                <!-- Replace the span above with an arXiv link once the identifier is assigned. -->
+              </p>
+            </div>
+          </article>
+
+          <article class="research-item">
+            <div class="research-meta">
               <span class="status">Technical report</span>
               <span>2024 · revised 2026</span>
             </div>
@@ -101,24 +127,33 @@
           </article>
 
           <article class="research-item">
-            <div class="research-meta"><span>Ongoing research</span></div>
+            <div class="research-meta">
+              <span>Ongoing research</span>
+              <span>2026–Present</span>
+            </div>
             <div>
-              <h3>Multi-step Proximal Policy Improvement</h3>
+              <h3>MART: Multi-Step Actor Refinement Trajectories in Offline Reinforcement Learning</h3>
               <p>
-                Offline RL must balance staying near dataset-supported actions, where value
-                estimates are more reliable, with moving far enough to obtain meaningful policy
-                improvement. MPI interprets a behavior-regularized actor update as one proximal
-                step and composes a small number of refinements whose anchor moves to the latest
-                policy after each step. Re-centering changes the finite-step optimization path, so
-                MPI is not equivalent to taking more gradient steps on the same fixed-anchor loss
-                or simply weakening regularization. This direction builds on POGO, my earlier
-                exploration of transport-map policies and JKO/Sinkhorn-based policy flows. My
-                current work studies
-                <span class="math"> &tau;</span> as the implicit discretization step size of the
-                critic-induced policy flow: small values produce conservative local motion,
-                whereas larger values travel farther but increase discretization and critic-error
-                risk. I use sweeps and displacement diagnostics to identify when repeated
-                refinement is useful and when it begins to over-refine.
+                MART studies how a fixed policy-improvement horizon can be traversed through
+                multiple persistent local actors. By exposing only the first actor to Bellman
+                targets and deploying the endpoint, it analyzes how refinement depth changes
+                critic-facing bootstrap exposure, deployment reach, and offline training stability.
+              </p>
+            </div>
+          </article>
+
+          <article class="research-item">
+            <div class="research-meta">
+              <span>Ongoing research</span>
+              <span>2026–Present</span>
+            </div>
+            <div>
+              <h3>AMO: Adaptive Manifold Optimization</h3>
+              <p>
+                AMO learns the total proximal-flow horizon from an offline bilevel outer
+                objective while treating refinement depth as numerical resolution. The learned
+                horizon is realized through sequential re-centered steps, adapting how far the
+                policy follows critic-induced flow without using online return.
               </p>
             </div>
           </article>
