@@ -150,10 +150,11 @@
             <div>
               <h3>AMO: Adaptive Multiscale Policy Optimization in Offline Reinforcement Learning</h3>
               <p>
-                AMO learns the total proximal-flow horizon from an offline bilevel outer
-                objective while treating refinement depth as numerical resolution. The learned
-                horizon is realized through sequential re-centered steps, adapting how far the
-                policy follows critic-induced flow without using online return.
+                AMO learns the total policy-improvement horizon T from an offline bilevel
+                outer objective while treating N as a multiscale resolution parameter. Following
+                MART's two-actor structure, it separates the critic-facing and actor scales: the
+                critic uses the local T/N policy, while the actor represents the full-horizon T
+                policy.
               </p>
             </div>
           </article>
