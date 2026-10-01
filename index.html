@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Soohyun Choi studies offline policy optimization, multi-step actor refinement, adaptive multiscale policy optimization, and long-horizon goal-conditioned reinforcement learning." />
+    <meta name="description" content="Soohyun Choi studies offline policy optimization, multi-step actor refinement, role-adaptive policy optimization, and long-horizon goal-conditioned reinforcement learning." />
     <meta name="theme-color" content="#ffffff" />
     <title>Soohyun Choi | Reinforcement Learning</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -17,7 +17,7 @@
         <nav aria-label="Primary navigation">
           <a href="#research">Research</a>
           <a href="#background">Background</a>
-          <a href="assets/Soohyun_Choi_CV.pdf?v=20260904b">CV</a>
+          <a href="assets/Soohyun_Choi_CV.pdf?v=20261001">CV</a>
         </nav>
       </header>
 
@@ -39,7 +39,7 @@
               </p>
               <div class="links" aria-label="Profile links">
                 <a href="mailto:petersun0221@hanyang.ac.kr">Email</a>
-                <a href="assets/Soohyun_Choi_CV.pdf?v=20260904b">CV</a>
+                <a href="assets/Soohyun_Choi_CV.pdf?v=20261001">CV</a>
                 <a href="https://github.com/SChoish" target="_blank" rel="noreferrer">GitHub</a>
                 <a href="https://sites.google.com/view/snlab" target="_blank" rel="noreferrer">IISL</a>
               </div>
@@ -84,21 +84,45 @@
               <span>2026</span>
             </div>
             <div>
-              <h3>Multi-step Proximal Policy Improvement in Offline Reinforcement Learning</h3>
+              <h3>Is One Step Enough for Offline Policy Improvement?</h3>
               <p class="authors">
                 <strong>Soohyun Choi</strong><sup>*</sup>, Seonvin Cho<sup>*</sup>, and
                 Songnam Hong<sup>†</sup>
               </p>
               <p class="authors"><sup>*</sup>Equal contribution · <sup>†</sup>Corresponding author</p>
               <p>
-                MPI interprets behavior-anchored offline actor updates as proximal policy
-                improvement steps on a policy manifold and composes sequential re-centered
-                refinements. It studies how geometry, step size, and critic error shape controlled
-                advancement beyond dataset support.
+                Multi-step Proximal Policy Improvement (MPI) composes re-centered proximal
+                policy updates. The revised paper distinguishes subdivision of a fixed nominal
+                total horizon T into K stages with local horizon T/K from additional refinement
+                at a common local horizon. It studies how re-centering, geometry, and critic
+                error affect policy improvement, with deterministic TD3+BC and Gaussian IQL
+                extraction experiments.
               </p>
               <p class="project-links">
                 <a href="https://github.com/SChoish/MPI" target="_blank" rel="noreferrer">Code</a>
-                <a href="https://arxiv.org/abs/2609.03842" target="_blank" rel="noreferrer">arXiv</a>
+                <a href="https://arxiv.org/abs/2609.03842v2" target="_blank" rel="noreferrer">arXiv</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="research-item">
+            <div class="research-meta">
+              <span class="status">Preprint</span>
+              <span>2026</span>
+            </div>
+            <div>
+              <h3>Role-Adaptive Policy Optimization for Offline Reinforcement Learning</h3>
+              <p class="authors">Seonvin Cho, <strong>Soohyun Choi</strong>, and Songnam Hong</p>
+              <p>
+                RAPO learns policy-update coefficients by differentiating through candidate
+                updates and evaluating them according to their role. For TD3+BC, it separates
+                execution and bootstrap actors, using a local improvement surrogate for execution
+                and target stability for bootstrapping. For IQL, it retains the original value
+                updates and adapts only the inverse temperature of advantage-weighted policy
+                extraction. Experiments cover D4RL locomotion and AntMaze tasks.
+              </p>
+              <p class="project-links">
+                <a href="https://arxiv.org/abs/2609.40149" target="_blank" rel="noreferrer">arXiv</a>
               </p>
             </div>
           </article>
@@ -137,23 +161,6 @@
                 multiple persistent local actors. By exposing only the first actor to Bellman
                 targets and deploying the endpoint, it analyzes how refinement depth changes
                 critic-facing bootstrap exposure, deployment reach, and offline training stability.
-              </p>
-            </div>
-          </article>
-
-          <article class="research-item">
-            <div class="research-meta">
-              <span>Ongoing research</span>
-              <span>2026–Present</span>
-            </div>
-            <div>
-              <h3>AMO: Adaptive Multiscale Policy Optimization in Offline Reinforcement Learning</h3>
-              <p>
-                AMO learns the total policy-improvement horizon T from an offline bilevel
-                outer objective while treating N as a multiscale resolution parameter. Following
-                MART's two-actor structure, it separates the critic-facing and actor scales: the
-                critic uses the local T/N policy, while the actor represents the full-horizon T
-                policy.
               </p>
             </div>
           </article>

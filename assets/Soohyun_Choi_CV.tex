@@ -1,0 +1,137 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[letterpaper,top=0.35in,bottom=0.35in,left=0.62in,right=0.62in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.96]{helvet}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{navy}{HTML}{214D7E}
+\definecolor{ink}{HTML}{202936}
+\definecolor{muted}{HTML}{657184}
+\definecolor{rule}{HTML}{D3DAE3}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=navy,
+  linkcolor=navy,
+  pdfauthor={Soohyun Choi},
+  pdftitle={Soohyun Choi - Curriculum Vitae},
+  pdfsubject={Academic CV for visiting research applications}
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\newcommand{\cvsection}[1]{%
+  \par\vspace{2.8pt}%
+  {\color{navy}\bfseries\fontsize{11.7}{13.2}\selectfont #1}\par\vspace{0.8pt}
+  {\color{rule}\rule{\linewidth}{0.45pt}}\par\vspace{1.5pt}
+}
+
+\newcommand{\headingrow}[2]{%
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\raggedleft\arraybackslash}p{1.28in}@{}}
+    \textbf{#1} & {\color{muted}#2}
+  \end{tabularx}\par\vspace{-1.8pt}
+}
+
+\newcommand{\researchentry}[4]{%
+  \headingrow{#1}{#2}
+  {\color{muted}\itshape #3}\par\vspace{0.4pt}
+  #4\par\vspace{1.4pt}
+}
+
+\newcommand{\ongoingentry}[3]{%
+  \headingrow{#1}{#2}
+  #3\par\vspace{1pt}
+}
+
+\begin{document}
+\color{ink}
+\fontsize{9.5}{10.4}\selectfont
+
+\begin{center}
+  {\bfseries\fontsize{26}{29}\selectfont Soohyun Choi}\par\vspace{3pt}
+  {\color{muted}\fontsize{10.5}{12.5}\selectfont
+    Integrated M.S./Ph.D. Student in Electronic Engineering \textbar{} Reinforcement Learning\par
+    Hanyang University \textbullet{} Information and Intelligence Systems Lab (IISL) \textbullet{} Seoul, Republic of Korea
+  }\par\vspace{4pt}
+  {\fontsize{9.9}{11.6}\selectfont
+    \href{mailto:petersun0221@hanyang.ac.kr}{petersun0221@hanyang.ac.kr}
+    {\color{rule}\hspace{5pt}\textbar{}\hspace{5pt}}
+    \href{https://schoish.github.io/}{schoish.github.io}
+    {\color{rule}\hspace{5pt}\textbar{}\hspace{5pt}}
+    \href{https://github.com/SChoish}{github.com/SChoish}
+  }
+\end{center}
+\vspace{-2pt}
+{\color{navy}\rule{\linewidth}{0.85pt}}
+
+\cvsection{Research Interests}
+My research focuses on reinforcement learning, particularly the mathematical and geometric analysis
+of learning algorithms. I develop algorithms and modeling frameworks using generative models and
+stochastic processes for goal-conditioned and long-horizon control.
+
+\cvsection{Education}
+\headingrow{Hanyang University}{Sep. 2024--Present}
+\textit{Integrated M.S./Ph.D. Program in Electronic Engineering}\par\vspace{-0.5pt}
+{\color{muted}Information and Intelligence Systems Lab (IISL) \textbullet{} Advisor: Prof. Songnam Hong}\par\vspace{2.8pt}
+\headingrow{Hanyang University}{2018--2024}
+\textit{B.S. in Electronic Engineering}
+
+\cvsection{Preprints}
+\researchentry
+  {PathBridger: Subgoal Bridges for Offline Goal-Conditioned Reinforcement Learning}
+  {2026}
+  {Soohyun Choi\textsuperscript{*}, Seonvin Cho\textsuperscript{*}, and Songnam Hong \textbullet{} \textsuperscript{*}Equal contribution \textbullet{} \href{https://arxiv.org/abs/2608.29061}{arXiv:2608.29061} \textbullet{} \href{https://github.com/SChoish/PathBridger}{Code}}
+  {Developed a hierarchical offline GCRL framework that connects subgoal selection to short-horizon execution through state-space bridges, inverse dynamics, and execution-time replanning.}
+
+\researchentry
+  {Is One Step Enough for Offline Policy Improvement?}
+  {2026}
+  {Soohyun Choi\textsuperscript{*}, Seonvin Cho\textsuperscript{*}, and Songnam Hong\textsuperscript{\textdagger} \textbullet{} \textsuperscript{*}Equal contribution \textbullet{} \textsuperscript{\textdagger}Corresponding author \textbullet{} \href{https://arxiv.org/abs/2609.03842v2}{arXiv:2609.03842 v2} \textbullet{} \href{https://github.com/SChoish/MPI}{Code}}
+  {Developed MPI, a re-centered proximal policy-improvement framework; distinguished fixed-total-horizon subdivision from additional refinement and studied geometry, discretization, and critic error with TD3+BC and Gaussian IQL extraction.}
+
+\researchentry
+  {Role-Adaptive Policy Optimization for Offline Reinforcement Learning}
+  {2026}
+  {Seonvin Cho, Soohyun Choi, and Songnam Hong \textbullet{} \href{https://arxiv.org/abs/2609.40149}{arXiv:2609.40149}}
+  {Developed RAPO to adapt policy-update coefficients through role-specific meta-gradients: separate execution and bootstrap actors in TD3+BC, and adaptive advantage-weighted policy extraction in IQL.}
+
+\cvsection{Research Experience}
+\researchentry
+  {Graduate Researcher, Information and Intelligence Systems Lab}
+  {Sep. 2024--Present}
+  {Hanyang University \textbullet{} Advisor: Prof. Songnam Hong}
+  {Research on mathematical and geometric analysis for offline policy optimization and generative modeling for long-horizon control. Projects include MPI, RAPO, and PathBridger; ongoing work includes MART and PathFlower.}
+
+\researchentry
+  {Research Participant, SK hynix--Hanyang University Project}
+  {2024--2025}
+  {REACT: Recursive Algorithm for RC Network Transfer Functions}
+  {Developed a recursive closed-form transfer-function method for arbitrary RC trees and a dominant-pole reduced-order approximation validated against SPICE.}
+
+\cvsection{Selected Research Project}
+\researchentry
+  {ALARM: Attention and Line Search Based Analog Circuit Optimization on a Riemannian Manifold}
+  {2024; rev. 2026}
+  {Soohyun Choi, Minseok Oh, and Ickhyun Song \textbullet{} Undergraduate capstone technical report \textbullet{} \href{https://schoish.github.io/assets/ALARM_Capstone_Technical_Report.pdf}{Report}}
+  {Formulated designer-selected performance equivalence classes and quotient geometry for circuit search; achieved 10/10 success with 33.2 SPICE evaluations on average in the archived VCO study.}
+
+\cvsection{Honors \& Funding}
+\headingrow{Top Excellence Award - Alumni Association Special Award}{2023}
+\headingrow{Top Excellence Award - 15th Capstone Design Fair}{2023}
+\headingrow{Graduation Honors, Hanyang University}{2024}
+\headingrow{BK Research Assistantship, Hanyang University}{Fall 2025}
+
+\cvsection{Selected Graduate Coursework}
+\textbf{Learning \& Control:} Machine Learning; Robot Learning; Advanced Optimal Control Theory\par
+\textbf{Probability \& Analysis:} Probability and Statistics; Stochastic Processes; Uncertainty Quantification; Functional Analysis I
+
+\end{document}
