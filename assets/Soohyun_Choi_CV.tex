@@ -37,7 +37,7 @@
 
 \newcommand{\headingrow}[2]{%
   \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\raggedleft\arraybackslash}p{1.28in}@{}}
-    \textbf{#1} & {\color{muted}#2}
+    \textbf{#1} & \textcolor{muted}{#2}
   \end{tabularx}\par\vspace{-1.8pt}
 }
 
@@ -104,12 +104,18 @@ stochastic processes for goal-conditioned and long-horizon control.
   {Seonvin Cho, Soohyun Choi, and Songnam Hong \textbullet{} \href{https://arxiv.org/abs/2609.40149}{arXiv:2609.40149}}
   {Developed RAPO to adapt policy-update coefficients through role-specific meta-gradients: separate execution and bootstrap actors in TD3+BC, and adaptive advantage-weighted policy extraction in IQL.}
 
+\cvsection{Ongoing Research}
+\ongoingentry{Extensions of PathBridger}{Present}{%
+  \textbf{Skill Learning and Composition:} Investigating how to learn reusable skills from offline trajectories and compose them for long-horizon goal-conditioned tasks.\par
+  \textbf{Latent-Space Bridge Planning:} Exploring learned representations and geometrically structured latent spaces for goal-conditioned bridge generation and short-horizon execution.
+}
+
 \cvsection{Research Experience}
 \researchentry
   {Graduate Researcher, Information and Intelligence Systems Lab}
   {Sep. 2024--Present}
   {Hanyang University \textbullet{} Advisor: Prof. Songnam Hong}
-  {Research on mathematical and geometric analysis for offline policy optimization and generative modeling for long-horizon control. Projects include MPI, RAPO, and PathBridger; ongoing work includes PathFlower.}
+  {Research on mathematical and geometric analysis for offline policy optimization and generative modeling for long-horizon control. Projects include MPI, RAPO, and PathBridger.}
 
 \researchentry
   {Research Participant, SK hynix--Hanyang University Project}
